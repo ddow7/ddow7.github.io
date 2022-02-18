@@ -27,12 +27,13 @@
             width : 300px;
         }
         button{
+            margin-top: 10px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             border : none;
-            background-color: rgb(101, 150, 255);
+            background-color: rgb(255, 101, 101);
             color: white;
             font-size: large;
             padding: 20px;
@@ -45,7 +46,7 @@
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             border : none;
-            background-color: rgb(163, 192, 255);
+            background-color: rgb(255, 163, 163);
             color: white;
             font-size: large;
             padding: 20px;
@@ -61,20 +62,45 @@
             margin-left: 250px;
             margin-right: 250px;
         }
+
+        textarea{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            width: 300px;
+			height: 200px;
+			padding: 10px;
+			box-sizing: border-box;
+			border: solid 2px #1E90FF;
+			border-radius: 5px;
+			font-size: 16px;
+			resize: both;
+        }
     </style>
 </head>
 <body>
     <div id = "supercontents">
         <div id="contents">
-            <h1 id="logo" onclick="location.href='dont.html' ">PSH</h1>
+            <h1 id="logo" onclick="location.href='page1.html' ">PSH</h1>
             <div id="emptybar"></div>
             <div id="emptybar"></div>
-            <h1 style="margin-bottom: 15px; font-size: 40px; color: rgb(66, 66, 66);">졸업생 유형 테스트</h1>
-            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 20px; color: rgb(119, 119, 119);">졸업을 축하합니다!</p>
-            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 20px; color: rgb(119, 119, 119);">나의 졸업 유형과 앞으로의 미래는?</p>
-            <img id="image1" src="./image/gom.png">
+            <h1 style="margin-bottom: 15px; font-size: 50px; color: rgb(0, 86, 156);">Q3.</h1>
+            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 20px; color: rgb(119, 119, 119);">어떤 종류의 기프티콘을 원하시나요?</p>
+            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 15px; color: rgb(121, 147, 177);">상세하게 적으실수록 결과가 더 잘 나오게됩니다.</p>
             <div id="emptybar"></div>
-            <button type="button" onclick="location.href='page1.html' ">테스트 하고 선물받기!</button>
+            <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+            <form action="https://formspree.io/f/xbjwoogn" method="POST" target="dummyframe">
+                <label>
+                <textarea style="display: none;" name="order">기프티콘</textarea>
+                </label>
+                <label>
+                <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <br/>
+                <button type="submit" onclick="location.href='page4.html' ">결과 확인하기</button>
+            </form>
         </div>
     </div>
 </body>
