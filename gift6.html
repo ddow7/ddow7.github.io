@@ -3,42 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>졸업을 축하합니다리우스</title>
+    <title>[원스토어]Gift Event!</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('r77xwsIAyB-nUcvwl');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_p355oh1', 'template_93jrrae', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+                setTimeout(function(){
+                    window.location.href='gift61.html';
+                }, 500);
+            });
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
         body{
-            background-color: rgb(182, 219, 255);
+            background-color: rgb(255, 255, 255);
             text-align: center;
+            margin: 0px;
         }
         #supercontents{
             display: inline-block;
+            width: 100vw;
+            height: 100vh;
         }
         #contents{
-            width: 600px;
             display: table-cell;
             vertical-align: middle;
+            width: 100vw;
+            height: 100%;
         }
         #emptybar{
             display: inline-block;
-            height: 100px;
-            width: 600px;
+            height: 8vh;
+            width: 100%;
         }
         #image1{
-            width : 300px;
+            width : 65vw;
         }
-        button{
-            margin-top: 10px;
+
+        #image2{
+            width : 40vw;
+        }
+        #button{
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             border : none;
-            background-color: rgb(255, 101, 101);
+            background-color: rgb(243, 69, 69);
             color: white;
             font-size: large;
-            padding: 20px;
+            padding: 3vw;
             cursor: pointer;
+            margin: 2vh;
+            font-size: 6vw;
         }
 
         button:hover{
@@ -47,61 +82,54 @@
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             border : none;
-            background-color: rgb(255, 163, 163);
+            background-color: rgb(255, 159, 159);
             color: white;
             font-size: large;
             padding: 20px;
-            
+            font-size: 5vw;
         }
 
-        #logo{
-            margin-top: 5px;
-            font-family: 'Lobster', cursive;
-            color: rgb(0, 174, 255);
-            cursor: pointer;
-            width: 100px;
-            margin-left: 250px;
-            margin-right: 250px;
+        #topbar{
+            width: 100%;
+            height: 3vh;
+            background-color: rgb(243, 69, 69);
+            margin: 0px;
+            padding: 0px;
         }
 
-        textarea{
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            width: 300px;
-			height: 200px;
-			padding: 10px;
-			box-sizing: border-box;
-			border: solid 2px #1E90FF;
-			border-radius: 5px;
-			font-size: 16px;
-			resize: both;
+        #botbar{
+            width: 100%;
+            height: 3vh;
+            background-color: rgb(243, 69, 69);
+            margin: 0px;
+            padding: 0px;
+            position :absolute;
+            bottom: 0px;
         }
     </style>
 </head>
 <body>
+    <div id="topbar"></div>
     <div id = "supercontents">
         <div id="contents">
-            <h1 id="logo" onclick="location.href='dont.html' ">GIFT</h1>
+            <a onclick="location.href='dont.html'">
+                <img id="image2" src="./image/logo.png">
+            </a>
             <div id="emptybar"></div>
-            <div id="emptybar"></div>
-            <h1 style="margin-bottom: 15px; font-size: 50px; color: rgb(0, 86, 156);">Q3.</h1>
-            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 20px; color: rgb(119, 119, 119);">어떤 종류의 선물을 원하시나요?</p>
-            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 15px; color: rgb(121, 147, 177);">상세하게 적으실수록 결과가 더 잘 나오게됩니다.</p>
-            <div id="emptybar"></div>
-            <form action="https://formspree.io/f/xbjwoogn" method="POST">
-                <label>
-                <textarea style="display: none;" name="order">그 외</textarea>
-                </label>
-                <label>
-                <textarea name="message"></textarea>
-                </label>
-                <!-- your other form fields go here -->
-                <br/>
-                <button type="submit">결과 확인하기</button>
+            <h1 style="margin-bottom: 15px; font-size: 7vw; color: rgb(255, 83, 83);">Q4-1.</h1>
+            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 5vw; color: rgb(119, 119, 119);">어떤걸 원하시나요?</p>
+            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 4vw; color: rgb(179, 179, 179);">(해당 정보는 더 나은 혜택을 위해 쓰입니다.)</p>
+            <img id="image1" src="./image/happy.png">
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <input style="font-size: 3vw; color: rgb(119, 119, 119);" name="name" ></input>
+                <br />
+                <textarea style="display: none;" name="message" >그외</textarea>
+                <br />
+                <input id="button" type="submit" value="다음으로!">
             </form>
         </div>
     </div>
+    <div id="botbar"></div>
 </body>
 </html>

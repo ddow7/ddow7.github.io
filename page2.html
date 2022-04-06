@@ -3,42 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>졸업을 축하합니다리우스</title>
+    <title>[원스토어]Gift Event!</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
         body{
-            background-color: rgb(182, 219, 255);
+            background-color: rgb(255, 255, 255);
             text-align: center;
+            margin: 0px;
         }
         #supercontents{
             display: inline-block;
+            width: 100vw;
+            height: 100vh;
         }
         #contents{
-            width: 600px;
             display: table-cell;
             vertical-align: middle;
+            width: 100%;
+            height: 100%;
         }
         #emptybar{
             display: inline-block;
-            height: 100px;
-            width: 600px;
+            height: 6vh;
+            width: 100%;
         }
         #image1{
-            width : 300px;
+            width : 65vw;
+        }
+
+        #image2{
+            width : 40vw;
         }
         button{
-            margin-bottom: 10px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             border : none;
-            background-color: rgb(101, 150, 255);
+            background-color: rgb(243, 69, 69);
             color: white;
             font-size: large;
-            padding: 20px;
+            padding: 3vw;
             cursor: pointer;
+            margin: 1vh;
+            font-size: 5vw;
         }
 
         button:hover{
@@ -47,46 +56,51 @@
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             border : none;
-            background-color: rgb(163, 192, 255);
+            background-color: rgb(255, 159, 159);
             color: white;
             font-size: large;
             padding: 20px;
-            
+            font-size: 5vw;
         }
 
-        #logo{
-            margin-top: 5px;
-            font-family: 'Lobster', cursive;
-            color: rgb(0, 174, 255);
-            cursor: pointer;
-            width: 100px;
-            margin-left: 250px;
-            margin-right: 250px;
+        #topbar{
+            width: 100%;
+            height: 3vh;
+            background-color: rgb(243, 69, 69);
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #botbar{
+            width: 100%;
+            height: 3vh;
+            background-color: rgb(243, 69, 69);
+            margin: 0px;
+            padding: 0px;
+            position :absolute;
+            bottom: 0px;
         }
     </style>
 </head>
 <body>
+    <div id="topbar"></div>
     <div id = "supercontents">
         <div id="contents">
-            <h1 id="logo" onclick="location.href='page1.html' ">GIFT</h1>
+            <a onclick="location.href='dont.html'">
+                <img id="image2" src="./image/logo.png">
+            </a>
             <div id="emptybar"></div>
             <div id="emptybar"></div>
-            <h1 style="margin-bottom: 15px; font-size: 50px; color: rgb(0, 86, 156);">Q2.</h1>
-            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 20px; color: rgb(119, 119, 119);">평소 친하게 지내던 대학 선배가 졸업 선물을 준다고 한다.</p>
-            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 20px; color: rgb(119, 119, 119);">당신이 원하는 선물은?</p>
+            <h1 style="margin-bottom: 15px; font-size: 7vw; color: rgb(255, 83, 83);">Q2.</h1>
+            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 4vw; color: rgb(119, 119, 119);">시험 전날...</p>
+            <p style="margin-top: 3px; margin-bottom: 5px; font-size: 4vw; color: rgb(119, 119, 119);">책상에 앉자마자 하는 것은?</p>
+            <img id="image1" src="./image/study.png">
             <div id="emptybar"></div>
-            <button type="button" onclick="location.href='gift1.html' ">립스틱/향수 등 화장품</button>
-            <br/>
-            <button type="button" onclick="location.href='gift2.html' ">지갑/폰케이스 등 잡화</button>
-            <br/>
-            <button type="button" onclick="location.href='gift3.html' ">반지/목걸이 등 악세서리</button>
-            <br/>
-            <button type="button" onclick="location.href='gift4.html' ">기프티콘이면 충분해</button>
-            <br/>
-            <button type="button" onclick="location.href='gift6.html' ">그 외 (먹거리, 굿즈 등)</button>
-            <br/>
-            <button type="button" onclick="location.href='gift5.html' ">"선물은 우정을 대신할수 없어.난 당신과의 우정을 원해"</button>
+            <button type="button" onclick="location.href='page3.html' ">일단 책상정리부터...</button>
+            <br />
+            <button type="button" onclick="location.href='page3.html' ">단호하게 바로 공부시작!</button>
         </div>
     </div>
+    <div id="botbar"></div>
 </body>
 </html>
