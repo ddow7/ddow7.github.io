@@ -14,14 +14,11 @@
         }
         #supercontents{
             display: inline-block;
-            width: 100vw;
-            height: 100vh;
         }
         #contents{
             display: table-cell;
             vertical-align: middle;
             width: 100vw;
-            height: 100%;
         }
         #emptybar{
             display: inline-block;
@@ -83,8 +80,8 @@
     </style>
 </head>
 <body>
-    <div id="topbar"></div>
     <div id = "supercontents">
+        <div id="topbar"></div>
         <div id="contents">
             <a onclick="location.href='dont.html'">
                 <img id="image2" src="./image/logo.png">
@@ -103,7 +100,7 @@
             <button type="button" onclick="location.href='index.html' ">다시 하기</button>
             <br />
         </div>
+        <div id="botbar"></div>
     </div>
-    <div id="botbar"></div>
 </body>
 </html>
